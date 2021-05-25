@@ -11,12 +11,12 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class WeatherClient {
-    public WeatherInfo downloadWeatherInfo() {
+    public WeatherInfo downloadWeatherInfo(String city) {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
                 .uri(URI.create("https://api.openweathermap.org" +
-                        "/data/2.5/weather?q=Warszawa&appid=" +
+                        "/data/2.5/weather?q=" + city + "&appid=" +
                         "53f0a7ba29b9f4be3321f71066f9b21b&lang=pl&units=metric"))
                 .build();
         try {

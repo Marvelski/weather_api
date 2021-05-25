@@ -11,8 +11,9 @@ class WeatherClientTest {
     void shouldDownloadJsonResponse() {
         //given
         WeatherClient weatherClient = new WeatherClient();
+        String city = "Warszawa";
         //when
-        WeatherInfo weatherInfo = weatherClient.downloadWeatherInfo();
+        WeatherInfo weatherInfo = weatherClient.downloadWeatherInfo(city);
         //then
         assertEquals("Warszawa", weatherInfo.getName());
 
