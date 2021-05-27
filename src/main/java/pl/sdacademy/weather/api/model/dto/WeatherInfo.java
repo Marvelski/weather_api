@@ -1,30 +1,24 @@
 package pl.sdacademy.weather.api.model.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
-import java.util.Map;
 
 public class WeatherInfo {
 
-    private List<Weather> weather;
-    private Temperature main;
+    @JsonProperty("main")
+    private Temperature temperature;
     private Wind wind;
     private Sys sys;
     private String name;
+    private List<Weather> weather;
 
-    public List<Weather> getWeather() {
-        return weather;
+    public Temperature getTemperature() {
+        return temperature;
     }
 
-    public void setWeather(List<Weather> weather) {
-        this.weather = weather;
-    }
-
-    public Temperature getMain() {
-        return main;
-    }
-
-    public void setMain(Temperature main) {
-        this.main = main;
+    public void setTemperature(Temperature main) {
+        this.temperature = main;
     }
 
     public Wind getWind() {
@@ -49,5 +43,13 @@ public class WeatherInfo {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Weather> getWeather() {
+        return weather;
+    }
+
+    public void setWeather(List<Weather> weather) {
+        this.weather = weather;
     }
 }

@@ -26,7 +26,7 @@ public class WeatherService {
         String country = Optional.ofNullable(weatherInfo.getSys())
                 .map(sys -> sys.getCountry())
                 .orElse("Brak danych!");
-        Double temperature = Optional.ofNullable(weatherInfo.getMain())
+        Double temperature = Optional.ofNullable(weatherInfo.getTemperature())
                 .map(main -> main.getTemp())
                 .orElse(Double.NaN);
         String description = Optional.ofNullable(weatherInfo.getWeather())
