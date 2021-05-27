@@ -9,30 +9,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Podaj nazwę miasta albo ID miasta: ");
-//        String description = scanner.next();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj nazwę albo ID miasta: ");
+        String description = scanner.next();
+
+        WeatherService weatherService = new WeatherService();
+        System.out.println(weatherService.getWeatherInfo(description));
+
+//        System.out.println(ReadFileToStringUtils.getFileFromResourceAsString("current.city.list.json"));
 //
-//        Optional<Integer> cityId = WeatherCityRepository.findCityId(description);
+//        City[] cities = JsonToPojoConverter.cityListFromJson("current.city.list.json");
 //
-//        WeatherService weatherService = new WeatherService();
-//        if (cityId.isEmpty()) {
-//            System.out.println(weatherService.getWeatherInfo(description));
-//        } else {
-//
-//        }
-
-
-
-//        WeatherService weatherService = new WeatherService();
-//        System.out.println(weatherService.getWeatherInfo(city));
-
-
-        //System.out.println(ReadFileToStringUtils.getFileFromResourceAsString("current.city.list.json"));
-
-        City[] cities = JsonToPojoConverter.cityListFromJson("current.city.list.json");
-
-        //ToDatabaseEntityConverter.saveToDatabase(cities);
+//        ToDatabaseEntityConverter.saveToDatabase(cities);
 
     }
 }

@@ -9,9 +9,7 @@ import javax.persistence.Persistence;
 import java.util.stream.Stream;
 
 public class ToDatabaseEntityConverter {
-
     public static void saveToDatabase(City[] cities) {
-
         final EntityManagerFactory emf = Persistence.createEntityManagerFactory("SakilaPU");
         final EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
@@ -21,5 +19,4 @@ public class ToDatabaseEntityConverter {
         em.getTransaction().commit();
         emf.close();
     }
-
 }

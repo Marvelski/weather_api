@@ -9,7 +9,6 @@ import pl.sdacademy.weather.api.model.dto.WeatherInfo;
 import java.util.List;
 
 public class JsonToPojoConverter {
-
     public static City[] cityListFromJson(String fileName) {
         String fileFromResourceAsString = ReadFileToStringUtils.getFileFromResourceAsString(fileName);
         try {

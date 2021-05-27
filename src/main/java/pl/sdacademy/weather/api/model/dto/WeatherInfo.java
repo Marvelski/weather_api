@@ -1,6 +1,7 @@
 package pl.sdacademy.weather.api.model.dto;
 
 import java.util.List;
+import java.util.Map;
 
 public class WeatherInfo {
 

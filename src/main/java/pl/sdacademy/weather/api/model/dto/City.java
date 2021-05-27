@@ -1,14 +1,12 @@
 package pl.sdacademy.weather.api.model.dto;
 
-import java.util.List;
-
 public class City {
 
     private int id;
-
     private String name;
 
-    //private List<String> langs;
+    //TODO
+    //private List<Map<String, String>> langs;
 
     public int getId() {
         return id;
@@ -25,12 +23,4 @@ public class City {
     public void setName(String name) {
         this.name = name;
     }
-
-//    public List<String> getLangs() {
-//        return langs;
-//    }
-
-//    public void setLangs(List<String> langs) {
-//        this.langs = langs;
-//    }
 }

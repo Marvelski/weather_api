@@ -1,17 +1,20 @@
 package pl.sdacademy.weather.api.model.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Weather {
 
-    private String main;
+    @JsonProperty("main")
+    private String name;
     private String description;
     private String icon;
 
-    public String getMain() {
-        return main;
+    public String getName() {
+        return name;
     }
 
-    public void setMain(String main) {
-        this.main = main;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {

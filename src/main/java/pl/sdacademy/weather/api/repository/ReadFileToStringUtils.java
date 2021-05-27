@@ -20,10 +20,9 @@ public class ReadFileToStringUtils {
         } else {
             return inputStream;
         }
-
     }
 
-    public static String getFileFromResourceAsString(String filename){
+    public static String getFileFromResourceAsString(String filename) {
         InputStream fileFromResourceAsStream = ReadFileToStringUtils.getFileFromResourceAsStream(filename);
         Scanner s = new Scanner(fileFromResourceAsStream).useDelimiter("\\A");
         return s.hasNext() ? s.next() : "";

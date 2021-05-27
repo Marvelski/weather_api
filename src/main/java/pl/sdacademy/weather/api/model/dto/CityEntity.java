@@ -10,11 +10,7 @@ public class CityEntity {
 
     @Id
     private Integer id;
-
     private String name;
-
-
-    //private List<Lang> langs;
 
     public CityEntity() {
     }
@@ -22,7 +18,6 @@ public class CityEntity {
     public CityEntity(int id, String name) {
         this.id = id;
         this.name = name;
-        //this.langs = langs;
     }
 
     public Integer getId() {
@@ -40,14 +35,6 @@ public class CityEntity {
     public void setName(String name) {
         this.name = name;
     }
-
-//    public List<Lang> getLangs() {
-//        return langs;
-//    }
-
-//    public void setLangs(List<Lang> langs) {
-//        this.langs = langs;
-//    }
 
     @Override
     public String toString() {
