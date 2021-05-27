@@ -11,7 +11,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class WeatherClient {
-
     public WeatherInfo downloadWeatherInfo(String city) {
         System.out.println("Wyszukiwanie przez nazwę");
         HttpClient client = HttpClient.newHttpClient();

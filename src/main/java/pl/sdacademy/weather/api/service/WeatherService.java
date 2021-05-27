@@ -28,7 +28,7 @@ public class WeatherService {
                 .orElse("Brak danych!");
         Double temperature = Optional.ofNullable(weatherInfo.getMain())
                 .map(main -> main.getTemp())
-                .orElse(0.0);
+                .orElse(Double.NaN);
         String description = Optional.ofNullable(weatherInfo.getWeather())
                 .filter(w -> w.size() > 0)
                 .map(w -> w.get(0))
@@ -36,7 +36,7 @@ public class WeatherService {
                 .orElse("Brak danych!");
         Double wind = Optional.ofNullable(weatherInfo.getWind())
                 .map(windSpeed -> windSpeed.getSpeed())
-                .orElse(0.0);
+                .orElse(Double.NaN);
         String cloudStatus = Optional.ofNullable(weatherInfo.getWeather())
                 .map(w -> w.get(0))
                 .map(cloud -> cloud.getName())
